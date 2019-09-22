@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <header>
+
+                <h1>Password Generator</h1>
+              </header>
+
+              <h2>Generate a Password</h2>
+              <textarea
+                readonly
+                id="password"
+                placeholder="Your Secure Password"
+              ></textarea>
+              <button id="generate">Generate Password</button>
+              <button id="copy">
+                Copy to Clipboard
+              </button>
+
+<script>
+
+//set the variable
+var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()<>?';
+
+//make the function number = number of characters (77)
+function randomCharacterGen(numberOfLetters) {
+
+  //result is blank
+  var result = "";
+  for( var i = 0; i < numberOfLetters; i++ ) {
+
+    //result = result + new stuff
+    result += characters[
+
+      //randomly generate a character from the array --- use [][][][][][] for array!!!!
+      //first floor the number(Result) of the following function (which is the random numbergenerator x length of array)
+      Math.floor
+
+      //multiply length of array (77) by a random number
+      (Math.random() * characters.length)];
+
+    //prints result everytime it loops
+    console.log(result);
+  }
+
+  //return the result
+  return result;
+
+  
+}
+
+onclick = (randomCharacterGen)
+
+//print the result - number of characters are generated randomly
+console.log(randomCharacterGen(8));
+
+var el = document.getElementById("generate");
+if (el.addEventListener)
+    el.addEventListener("click", randomCharacterGen(8));
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>
