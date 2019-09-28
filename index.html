@@ -4,71 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>PASSWORD GEN</title>
+
 </head>
 <body>
 
-        <header>
+  <div class="container">
 
-                <h1>Password Generator</h1>
-              </header>
-
-              <h2>Generate a Password</h2>
-              <textarea
-                readonly
-                id="password"
-                placeholder="Your Secure Password"
-              ></textarea>
-              <button id="generate">Generate Password</button>
-              <button id="copy">
-                Copy to Clipboard
-              </button>
-
-<script>
-
-//set the variable
-var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()<>?';
-
-//make the function number = number of characters (77)
-function randomCharacterGen(numberOfLetters) {
-
-  //result is blank
-  var result = "";
-  for( var i = 0; i < numberOfLetters; i++ ) {
-
-    //result = result + new stuff
-    result += characters[
-
-      //randomly generate a character from the array --- use [][][][][][] for array!!!!
-      //first floor the number(Result) of the following function (which is the random numbergenerator x length of array)
-      Math.floor
-
-      //multiply length of array (77) by a random number
-      (Math.random() * characters.length)];
-
-    //prints result everytime it loops
-    console.log(result);
-  }
-
-  //return the result
-  return result;
-
-  
-}
-
-onclick = (randomCharacterGen)
-
-//print the result - number of characters are generated randomly
-console.log(randomCharacterGen(8));
-
-var el = document.getElementById("generate");
-if (el.addEventListener)
-    el.addEventListener("click", randomCharacterGen(8));
+    <div class="content">
 
     
-    
-    
-    
-    </script>
+      <h2>password generator</h2>
+      
+      <input type="text" id="display">
+      <br/>
+      
+      <input type="range" min="0" max="20" name="slider" id="slider">
+      <br/>
+      
+      <div id="length"></div>
+      <button onclick="generate()" id="btn">generate</button>
+      <button onclick="copy()" id="btn">copy</button>
+      
+      
+    </div>
+
+    <div id="lastPassword">
+      <h2>your passwords</h2>
+      
+
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
